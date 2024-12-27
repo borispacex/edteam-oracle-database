@@ -1,0 +1,23 @@
+INSTALACION ORACLE EN DOCKER
+Buscar  en la siguiente pagina: https://container-registry.oracle.com
+- Oracle Database Express Edition
+
+-- descargar imagen
+docker pull container-registry.oracle.com/database/express:21.3.0-xe
+-- ejecutar contenedor
+docker run -d --name oracle-xe -p 1521:1521 -e ORACLE_PWD=123456 container-registry.oracle.com/database/express:21.3.0-xe
+
+CONEXIONES
+Name: SYSTEM
+Usuario: SYSTEM
+Password: 123456
+Nombre del Host: localhost
+Puerto: 1521
+SID: xe
+
+
+-- configurar IDE sql developer a ingles
+-- Agregar este en el archivo /opt/sqldeveloper/ide/bin/ide.conf
+AddVMOption -Duser.language=en
+AddVMOption -Duser.country=US
+
