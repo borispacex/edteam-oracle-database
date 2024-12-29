@@ -1,0 +1,21 @@
+0. Ingreso a mi contenedor donde tengo instalado oracle
+docker exec -it oracle-xe bash
+
+1. Buscamos la palabra oracle en el contenedor
+printenv | grep ORACLE
+
+2. Ingresamos donde se guarda la BD (veamos que esta creado XE)
+cd /opt/oracle
+cd oradata
+
+3. Cuando creamos una BD, crea 2 bases de datos
+- SYS (super usuario)
+- SYSTEM
+
+4. CREAR DATABASE
+create database example;
+
+5. Mostrar que usuario estoy usando
+show user;
+
+/**********************/
